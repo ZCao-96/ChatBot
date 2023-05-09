@@ -1,16 +1,23 @@
 import os
 import openai
 from flask import Flask, jsonify, render_template, request, session
+import json
 
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
-openai.api_base = os.environ['api_base']
+# Opening JSON file
+f = open('local.settings.json')
+
+# returns JSON object as
+# a dictionary
+data = json.load(f)
+openai.api_base = data["API_Base"]
 openai.api_type = 'azure'
 openai.api_version = '2023-03-15-preview'
-openai.api_key = os.environ['api_key']
-deployment_name= os.environ['deployment_name']
+openai.api_key = data["API_Key"]
+deployment_name= data["Deployment_Name"]
 
 @app.route("/")
 def index():

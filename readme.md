@@ -44,7 +44,7 @@ After setting the API key environment variable, run the application using the fo
 
     python app.py
 
-The application will start on http://0.0.0.0:8080/. Open the link in your browser to interact with the ChatGPT web application.
+The application will start on http://localhost:8080/. Open the link in your browser to interact with the ChatGPT web application.
 
 
 ## Deployment on a Unix server

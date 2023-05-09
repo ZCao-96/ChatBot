@@ -1,0 +1,5 @@
+{
+    "API_Base": "https://chatbotwebapp.openai.azure.com/",
+    "API_Key": "f48f9396647d400e8aa4317f14399024",
+    "Deployment_Name": "SimpleChatBot"
+  }
